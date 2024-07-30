@@ -1,0 +1,270 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+label {
+  margin-top: 20px;
+}
+
+.modal {
+  background: #fff;
+  position: relative;
+  padding: 30px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+
+.input-field {
+  border-radius: 15px;
+  border: 1px solid #A9A9A9;
+  padding-left: 23px;
+  width: 90%;
+  height: 50px;
+  overflow-x: hidden;
+  background: #FFF;
+}
+
+#form-btn  {
+  margin-top: 10px;
+  width: 60%;
+  height: 60px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.modal-main-sign {
+  margin-bottom: 20px;
+  color: #000;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px;
+  line-height: normal;
+  overflow: hidden;
+}
+
+.modal-first {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+
+.dropdown-form {
+  width: 90%;
+  user-select: none;
+  position: relative;
+  overflow-y: visible;
+
+}
+.dropdown-form  .dropdown-form-btn {
+  border-radius: 15px;
+  border: 1px solid #A9A9A9;
+  margin-bottom: 15px;
+  padding-left: 23px;
+  height: 50px;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+
+}
+
+.dropdown-form .dropdown-form-content {
+
+  padding: 10px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  color: #333;
+  border-radius: 15px;
+  width: 320px;
+}
+
+.dropdown-form-content{
+  position: fixed;
+  z-index: 999; 
+
+}
+.dropdown-form .dropdown-form-content .dropdown-form-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 8px;
+}
+.dropdown-form .dropdown-form-content .dropdown-form-item:hover {
+  background: #f4f4f4;
+}
+
+.sms-field {
+  margin: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  padding-left: 16px;
+  width: 50px;
+  color: #333;
+}
+
+.modal-second {
+  overflow: hidden;
+}
+
+.modal-second-main {
+  background: #fff;
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.inputs-div {
+  padding-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+}
+
+.clock-locked {
+  opacity: 0.85;
+  font-size: 12px;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: 65%;
+}
+
+.clock-unlocked {
+  opacity: 1;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: 65%;
+}
+
+.clock-unlocked:hover {
+  transform: scale(1.03);
+}
+
+
+.success {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  font-family: "Raleway";
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 800;
+  padding-left: 16px;
+  color: #333;
+  border-color: #00ff00;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+.inputs-div-shaking {
+  padding-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  animation: shake 0.2s;
+}
+
+.modal-second-success {
+  position: absolute;
+  top: 10%;
+  left: -0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#success-sign {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 34px;
+  line-height: normal;
+  overflow: hidden;
+}
+
+#form-btn {
+  position: relative;
+  top: -12px;
+}
+
+
+.input-validation {
+  position: relative;
+  font-family: "Raleway";
+  font-size: 10px;
+  color: #de3b34;
+  font-weight: bold;
+  opacity: 0;
+  transition: .2s ease-in-out;
+  width: 80%;
+  padding-bottom: 2px;
+}
+
+.validation-open {
+  opacity: 1;
+}

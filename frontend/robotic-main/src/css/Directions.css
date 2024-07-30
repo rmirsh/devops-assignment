@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.directions-main {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.container-main {
+    width: 100%;
+    max-width: 1540px;
+    padding: 0 120px 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.directions-sign {
+    font-family: "Raleway";
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 44px
+}
+
+.robot-super-main {
+    width: 100%
+}
+
+.robot-dir-main {
+    transition: transform .25s;
+    transform-style: preserve-3d;
+    width: 100%
+}
+
+.robot-dir1 {
+    width: 100%;
+    padding: 30px 83px 50px 83px;
+    height: 332px;
+    display: flex;
+    background-color: #41efff;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+    position: absolute;
+    backface-visibility: hidden
+}
+
+.robot-dir-left {
+    display: flex;
+    flex-direction: column
+}
+
+#robot-dir-left-sign {
+    font-size: 29px;
+    margin-bottom: 26px
+}
+
+#robot-dir-left-thin {
+    line-height: 35px;
+    width: 23rem;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 43px
+}
+
+.robot-dir-left-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+
+.signup {
+    width: 13rem;
+    height: 67px;
+    border-radius: 20px;
+    background: #0054ff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25);
+    color: #fff;
+    font-family: "Raleway";
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 23px;
+    border: none;
+    transition: .2s ease-in-out
+}
+
+.signup:hover {
+    box-shadow: 0 0 10px 5px rgba(105, 140, 211, .5)
+}
+
+.signup:active {
+    box-shadow: 0 0 10px 10px rgba(105, 140, 211, .6)
+}
+
+.more {
+    width: 13rem;
+    height: 67px;
+    border-radius: 20px;
+    outline: none;
+    border: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: "Raleway";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 23px;
+    transition: .2s ease-in-out
+}
+
+.more:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, .7)
+}
+
+.more:active {
+    box-shadow: 0 0 13px 13px rgba(255, 255, 255, .9)
+}
+
+.robot-dir-mid {
+    display: flex;
+    flex-direction: column;
+    animation: robot 4s infinite;
+    min-width: 200px
+}
+
+@keyframes robot {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+#robothead {
+    width: 65%;
+    position: relative;
+    top: -5px;
+    left: 48px;
+    animation: robothead 5s infinite;
+    transition: .2s ease-in-out;
+    z-index: 10
+}
+
+@keyframes robothead {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(360deg)
+    }
+    75% {
+        transform: rotate(360deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#robotbody {
+    width: 100%;
+    position: relative;
+    top: -35px;
+    left: -8px
+}
+
+.robot-dir-right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 25%
+}
+
+#robot-dir-right-age {
+    font-size: 24px;
+    text-align: right;
+    position: absolute;
+    top: 6%;
+    right: 4%
+}
+
+#robot-dir-right-ul {
+    font-size: 22px;
+    position: relative;
+    left: 13px;
+    margin-bottom: 15px
+}
+
+ul {
+    color: #ebff00;
+    pointer-events: none
+}
+
+li {
+    font-family: "Raleway";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 20px;
+    pointer-events: none
+}
+
+.li {
+    color: #000;
+    pointer-events: none
+}
+
+.robot-dir2 {
+    width: 100%;
+    padding: 30px 63px 50px 63px;
+    height: 332px;
+    background-image: url("../assets/directions/bgrobots.webp");
+    background-size: cover;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+    backface-visibility: hidden;
+    transform: rotateY(180deg)
+}
+
+.robot-dir-flipped {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#robot-dir-flipped-main {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+#robot-dir-flipped-thin {
+    width: 880px;
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 40px
+}
+
+.close-icon {
+    position: absolute;
+    border: none;
+    background: transparent;
+    outline: none;
+    top: 0;
+    right: 2%;
+    transition: .3s ease-in-out;
+    border-radius: 50%;
+}
+
+.robot-dir-flipped-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%
+}
+
+.flipped-btn {
+    border-radius: 20px;
+    border: 1px solid #000;
+    width: 47%;
+    height: 57px;
+    background: #fff;
+    color: #000;
+    font-family: "Raleway";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25);
+    transition: all .3s ease-in-out
+}
+
+.flipped-btn-active {
+    width: 47.7%;
+    background: #0054ff;
+    color: #fff;
+    font-family: "Raleway";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .25);
+    border-radius: 20px;
+    border: 1px solid #000;
+    height: 57px;
+    transition: all .3s ease-in-out
+}
+
+#leftman {
+    position: absolute;
+    top: 17.5%;
+    left: 2.5%
+}
+
+#rightman {
+    position: absolute;
+    top: 17.5%;
+    left: 82%
+}
+
+.programming-gamedev, .oge-holidays {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.oge-holidays {
+    margin-bottom: 300px
+}
+
+.program-card-main, .game-card-main, .oge-card-main, .holiday-card-main {
+    transition: transform .25s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    width: 48%;
+    margin-top: 26px;
+    left: 0%
+}
+
+.program-front, .game-front, .oge-front, .holiday-front {
+    width: 100%;
+    padding: 50px 43px 50px 20px;
+    height: 300px;
+    display: flex;
+    background-color: #87fe78;
+    border-radius: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    z-index: 150;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25)
+}
+
+.program-front-left, .game-front-left, .oge-front-left, .holiday-front-left {
+    width: 140px
+}
+
+#computer-img {
+    position: relative;
+    left: 0%;
+    top: 14%;
+    animation: comp 5s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes comp {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.program-front-right, .game-front-right, .oge-front-right, .holiday-front-right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -7%;
+    width: 306px
+}
+
+.card-front-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    position: relative;
+    left: -4%
+}
+
+.smallw {
+    width: 150px;
+    height: 65px;
+    font-size: 20px
+}
+
+.card-front-mainsign {
+    font-family: "Raleway";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 20px
+}
+
+.card-front-thinsign {
+    color: #000;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 35px;
+    width: 306px;
+    box-sizing: border-box
+}
+
+.nowraps {
+    margin-top: 25px
+}
+
+.age {
+    position: absolute;
+    top: -7%;
+    right: -13%
+}
+
+.program-back, .game-back {
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    padding: 35px 70px 30px 38px;
+    height: 300px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);
+    border-radius: 30px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    text-align: left;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden
+}
+
+.card-back-sign {
+    font-family: "Raleway";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px
+}
+
+.game-front {
+    background-color: #ffdf6e;
+    border-radius: 30px
+}
+
+.holiday-front {
+    background-color: #97e0ff;
+    border-radius: 30px
+}
+
+.nowrap {
+    margin-top: 5px;
+    white-space: nowrap;
+    margin-bottom: 15px
+}
+
+#minecr-img {
+    position: relative;
+    width: 180px;
+    left: 0%;
+    top: 17%;
+    animation: minecr 6s  infinite linear;
+    animation-delay: 1s;
+}
+
+@keyframes minecr {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(10px) rotate(10deg)
+    }
+    100% {
+        transform: translateY(0) rotate(0deg)
+    }
+}
+
+.program-back {
+    background-image: url("../assets/directions/bgprogram.webp");
+    background-size: cover;
+    text-align: left;
+    z-index: 200
+}
+
+.game-back {
+    background-image: url("../assets/directions/bggamedev.webp");
+    background-size: cover;
+    text-align: left;
+    z-index: 200
+}
+
+.oge-front {
+    background-color: #98aefe;
+    border-radius: 30px
+}
+
+#pensil-img1 {
+    position: relative;
+    left: -25%;
+    top: 17%;
+    animation: pensil 4s infinite linear
+}
+
+@keyframes pensil {
+    0% {
+        transform: translateX(0) translateY(0)
+    }
+    25% {
+        transform: translateX(11%) translateY(10%) rotateX(25deg)
+    }
+    50% {
+        transform: translateX(0) translateY(0)
+    }
+    100% {
+        transform: translateX(0) translateY(0)
+    }
+}
+
+#holiday-img {
+    position: relative;
+    left: -25%;
+    top: 17%;
+    width: 200px;
+    animation: holiday 6s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+
+@keyframes holiday {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(7px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.bigw {
+    width: 60%
+}
