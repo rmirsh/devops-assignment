@@ -1,0 +1,47 @@
+networks:
+  dev:
+
+volumes:
+  pgdata:
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+      # - "443:443"
+    volumes:
+      - './nginx.conf:/etc/nginx/nginx.conf'
+      # SSL(?)
+      # - '/etc/letsencrypt:/etc/letsencrypt'
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - dev
+
+  pg:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: robotick
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 12345
+    ports:
+      - "5432:5432"
+    volumes: 
+      - pgdata:/var/lib/postgresql/data
+    
+
+  backend:
+    build:
+      context: ./backend
+    networks:
+      - dev
+    depends_on:
+      - pg
+
+  frontend:
+    build:
+      context: ./frontend/robotic-main
+    networks:
+      - dev
