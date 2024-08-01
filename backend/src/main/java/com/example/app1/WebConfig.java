@@ -12,7 +12,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry){
         registry.addMapping("/**")
-                .allowedOrigins("https://robotick.ru") // Разрешенные домены (ваш фронтенд)
+                // .allowedOrigins("https://robotick.ru") // Разрешенные домены (ваш фронтенд)
+                .allowedOrigins("*")
                 .allowedMethods("GET", "POST") // Разрешенные методы
                 .allowedHeaders("Authorization", "Content-Type") // Разрешенные заголовки
                 .allowCredentials(true); // Разрешение куки
