@@ -1,4 +1,4 @@
-FROM maven:3.9.8-alpine AS build
+FROM maven:3.8.4-alpine AS build
 
 WORKDIR /app
 
