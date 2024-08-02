@@ -81,7 +81,7 @@ const ModalWindow: React.FC<LessonRegistrationModalProps> = ({onClose, selectedD
             btn.disabled = false;
         }, 3000);
 
-        const url = 'https://roboserver.tech/isPhoneValid';
+        const url = 'http://backend:8000/isPhoneValid';
 
         if (name === "") {
             nameInput!.classList.add('validation-open');
