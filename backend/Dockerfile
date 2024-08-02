@@ -1,10 +1,5 @@
 FROM maven:3.9.8-openjdk-22
 
-# ARG JAR_FILE=target/*.jar
-
-# COPY ./target target
-# COPY ${JAR_FILE} target/app.jar
-
 WORKDIR /app
 
 COPY pom.xml .
