@@ -19,23 +19,13 @@ services:
     networks:
       - dev
 
-  db:
-    image: postgres:14-alpine
-    environment:
-      POSTGRES_DB: robotick
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: 12345
-    ports:
-      - "5432:5432"
-    volumes: 
-      - pgdata:/var/lib/postgresql/data
-    networks:
-      - dev
     
 
   backend:
     build:
       context: ./backend
+    ports:
+      - "8000:8000"
     depends_on:
       - db
     networks:
@@ -46,5 +36,18 @@ services:
   frontend:
     build:
       context: ./frontend/robotic-main
+    networks:
+      - dev
+
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: robotick
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 12345
+    ports:
+      - "5432:5432"
+    volumes: 
+      - pgdata:/var/lib/postgresql/data
     networks:
       - dev
