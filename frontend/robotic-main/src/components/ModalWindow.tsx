@@ -81,7 +81,7 @@ const ModalWindow: React.FC<LessonRegistrationModalProps> = ({onClose, selectedD
             btn.disabled = false;
         }, 3000);
 
-        const url = 'http://backend:8000/isPhoneValid';
+        const url = 'https://backend:8000/isPhoneValid';
 
         if (name === "") {
             nameInput!.classList.add('validation-open');
