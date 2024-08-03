@@ -75,7 +75,7 @@ const SMSValidation: React.FC<SMSProps> = ({onClose, data}) => {
 
     const passwordValidation = () => {
         const code = (smsContent1 + smsContent2 + smsContent3 + smsContent4).trim();
-        const url = 'https://backend:8000/submitUserData';
+        const url = 'https://robotick.ru/api/submitUserData';
         console.log(JSON.stringify({...data, code: code}) + '  отправляемые данные с кодом из смс')
         return fetch(url, {
             method: "POST",
@@ -117,7 +117,7 @@ const SMSValidation: React.FC<SMSProps> = ({onClose, data}) => {
     }
 
     const passwordValidationAgain = () => {
-        const url = 'https://backend:8000/isPhoneValid';
+        const url = 'https://robotick.ru/api/isPhoneValid';
         return fetch(url, {
             method: "POST",
             body: JSON.stringify({phone: data.phone}),
