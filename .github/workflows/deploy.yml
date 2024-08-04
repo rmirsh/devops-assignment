@@ -57,6 +57,6 @@ jobs:
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
           docker pull $DOCKER_USERNAME/frontend:latest
           docker pull $DOCKER_USERNAME/backend:latest
-          cd /path/to/your/project
-          docker-compose up -d --build
+          cd /root/robotick
+          docker-compose down && docker-compose up --build
         EOF
