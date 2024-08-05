@@ -58,5 +58,5 @@ jobs:
           docker pull $DOCKER_USERNAME/frontend:latest
           docker pull $DOCKER_USERNAME/backend:latest
           cd /root/robotick
-          docker-compose down && docker-compose up --build
+          docker-compose down && docker-compose up -d --build
         EOF
