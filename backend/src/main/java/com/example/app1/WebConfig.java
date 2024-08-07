@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("/api/**")
+        registry.addMapping("/**")
                 .allowedOrigins("https://robotick.ru") // Разрешенные домены
                 .allowedMethods("GET", "POST") // Разрешенные методы
                 .allowedHeaders("Authorization", "Content-Type") // Разрешенные заголовки
