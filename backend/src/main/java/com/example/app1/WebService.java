@@ -48,8 +48,15 @@ public class WebService {
     }
 
     public static void sendVerification(int code, String  phone) throws Exception {
-        SmsAeroClient client = new SmsAeroClient("ayupovkamil@gmail.com","zI3SEJijoecBtXxsgxl6L10u-SnZNaP7");
-        client.Send(phone, "Код авторизации пользователя на сайте robotick.ru: " + code, "Robotick.ru");
+        String urlString = "https://ayupovkamil%40gmail.com:zI3SEJijoecBtXxsgxl6L10u-SnZNaP7@gate.smsaero.ru/v2/sms/send?number=" + phone + "&text=Ваш код подтверждения для сайта robotick.ru: " + code + "&sign=SMS%20Aero";
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            httpURLConnection.connect();
+            httpURLConnection.disconnect();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
     public static void sendEmail(String subject, String message) throws Exception {
         // Настройки для подключения к серверу SMTP
