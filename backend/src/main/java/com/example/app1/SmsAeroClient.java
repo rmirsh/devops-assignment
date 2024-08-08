@@ -16,7 +16,7 @@ import java.util.Map;
 
 
 public class SmsAeroClient {
-    private static String _email = "ayupovkamil@gmail.com"  ;
+    private static String _email = "ayupovkamil@gmail.com";
     private static String _apiKey = "zI3SEJijoecBtXxsgxl6L10u-SnZNaP7";
 
     private static final List<String> _gateUrls = List.of(
