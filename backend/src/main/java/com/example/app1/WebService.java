@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.Properties;
 import java.util.Random;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 @Service
 public class WebService {
