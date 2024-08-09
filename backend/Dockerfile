@@ -11,7 +11,7 @@ FROM openjdk:22-jdk-slim
 
 WORKDIR /app
 COPY --from=build /app/target/App1-0.0.1-SNAPSHOT.jar /app/App1-0.0.1-SNAPSHOT.jar
-COPY robotick/chrome-driver/chrome-driver /usr/local/bin/
+COPY ./chrome-driver/chrome-driver /usr/local/bin/
 
 RUN apt-get install -y google-chrome-stable
 ENV CHROME_BIN=/usr/bin/google-chrome \
