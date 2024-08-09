@@ -48,6 +48,7 @@ public class WebService {
         int max = 9999;
         return random.nextInt((max - min) + 1) + min;
     }
+    
     public static String buildMessageSubmit(String name, String surname, String phone, String direction){
         return "Имя: " + name + "\nФамилия: " + surname + "\nНомер телефона: " + phone + "\nИнтересующее направление: " + direction;
     }
@@ -61,6 +62,7 @@ public class WebService {
         driver.get(url);
         driver.quit();
     }
+
     public static void sendEmail(String subject, String message) throws Exception {
         // Настройки для подключения к серверу SMTP
         Properties props = new Properties();
