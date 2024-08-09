@@ -58,7 +58,7 @@ public class WebService {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
-        System.setProperty("webdriver.chrome.driver", "usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         WebDriver driver = new ChromeDriver(options);
         driver.get(url);
         driver.quit();
