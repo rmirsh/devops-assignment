@@ -11,7 +11,7 @@ FROM openjdk:22-jdk-slim
 
 WORKDIR /app
 COPY --from=build /app/target/App1-0.0.1-SNAPSHOT.jar /app/App1-0.0.1-SNAPSHOT.jar
-COPY ./chrome-driver/chromedriver /usr/local/bin/
+COPY ./chrome-driver /app/chrome-driver
 
 # RUN apt-get install -y google-chrome-stable
 RUN apt-get update && apt-get install -y wget gnupg2 && \
