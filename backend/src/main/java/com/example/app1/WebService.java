@@ -6,6 +6,9 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Optional;
 import java.util.Properties;
@@ -50,15 +53,13 @@ public class WebService {
     }
 
     public static void sendVerification(int code, String  phone) throws Exception {
-        String urlString = "https://ayupovkamil%40gmail.com:zI3SEJijoecBtXxsgxl6L10u-SnZNaP7@gate.smsaero.ru/v2/sms/send?number=" + phone + "&text=Ваш код подтверждения для сайта robotick.ru: " + code + "&sign=SMS%20Aero";
-        try {
-            URL url = new URL(urlString);
-            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-            httpURLConnection.connect();
-            httpURLConnection.disconnect();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        String url = "https://ayupovkamil%40gmail.com:zI3SEJijoecBtXxsgxl6L10u-SnZNaP7@gate.smsaero.ru/v2/sms/send?number=" + phone + "&text=Ваш код для сайта robotick.ru: " + code + "&sign=SMS%20Aero";
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get(url);
+        driver.quit();
     }
     public static void sendEmail(String subject, String message) throws Exception {
         // Настройки для подключения к серверу SMTP
