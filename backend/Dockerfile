@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y wget gnupg2 && \
     rm -rf /var/lib/apt/lists/*
 
 ENV CHROME_BIN=/usr/bin/google-chrome \
-    CHROME_DRIVER=/usr/local/bin/chromedriver
+    CHROME_DRIVER=/app/chromedriver/chrome-driver
 
 EXPOSE 8000
 ENTRYPOINT ["java", "-jar", "/app/App1-0.0.1-SNAPSHOT.jar"]
